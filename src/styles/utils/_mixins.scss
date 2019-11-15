@@ -1,0 +1,24 @@
+@mixin breakpoint($media) {
+  @if (map-has-key($breakpoints, $media)) {
+    @media (min-width: map-get($breakpoints, $media)) {
+      @content;
+    }
+  } @else {
+    @warn "Media #{$media} not found!";
+  }
+}
+
+@mixin make-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @each $break, $width in $container-widths {
+    @if (map-has-key($breakpoints, $break)) {
+      @include breakpoint($break) {
+        width: $width;
+      }
+    } @else {
+      width: $width;
+    }
+  }
+}

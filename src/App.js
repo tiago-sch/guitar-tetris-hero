@@ -1,47 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import "./styles/app.scss";
+import Header from './components/Header';
 
-//getUserMedia()
+import Pitchy from './pages/Pitchy';
+import Tetris from './pages/Tetris';
+import GuitarTetrisHero from './pages/GuitarTetrisHero';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [inputs, setInputs] = useState([]);
-
-  useEffect(() => {
-    if (!loading) return;
-    navigator.mediaDevices.enumerateDevices().then(
-      data => {
-        data.forEach( device => {
-          if(device.kind === 'audioinput') {
-            setInputs([...inputs, device]);
-          }
-          if (data.length-1 === data.indexOf(device)) setLoading(false);
-        })
-      }
-    );
-  }, [inputs, loading]);
-
-  const renderInputs = () => {
-    console.log(inputs)
-    return (
-      <ul>
-        {
-          inputs.map(input =>
-            <li key={`${input.deviceId}`}>
-              { input.deviceId }
-            </li>
-          )
-        }
-      </ul>
-    )
-  }
-
   return (
-    <div className="App">
-      <header className="App-header">
-        { loading ? <p>Carregando...</p> : renderInputs()}
-      </header>
-    </div>
+    <Router>
+      <Header />
+
+      <main className='container'>
+        <Switch>
+          <Route path='/pitchy'>
+            <Pitchy />
+          </Route>
+          <Route path='/tetris'>
+            <Tetris />
+          </Route>
+          <Route path='/'>
+            <GuitarTetrisHero />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCell } from 'components/TetrisComponents/styles/StyledCell';
+import { StyledCell } from 'styles/Tetris/StyledCell';
 import { TETROMINOS } from 'constants/tetrisConstants';
 
 // React.memo makes sure we only re-render the changed cells

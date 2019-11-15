@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDisplay } from 'components/TetrisComponents/styles/StyledDisplay';
+import { StyledDisplay } from 'styles/Tetris/StyledDisplay';
 
 const Display = ({ gameOver, text }) => (
   <StyledDisplay gameOver={gameOver}>{text}</StyledDisplay>

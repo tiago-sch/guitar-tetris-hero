@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledStage } from 'components/TetrisComponents/styles/StyledStage';
+import { StyledStage } from 'styles/Tetris/StyledStage';
 
 import Cell from 'components/TetrisComponents/Cell';
 

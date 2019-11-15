@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { createStage, checkCollision } from 'utils/tetrisUtils';
-import { StyledTetrisWrapper, StyledTetris } from 'components/TetrisComponents/styles/StyledTetris';
+import { StyledTetrisWrapper, StyledTetris } from 'styles/Tetris/StyledTetris';
 
 // Custom Hooks
 import { useInterval } from 'hooks/useInterval';
@@ -101,11 +101,9 @@ const TetrisGame = ({ guitarMode }) => {
       } else if (keyCode === 39) {
         movePlayer(1);
       } else if (keyCode === 40) {
-        dropPlayer();
+        if (!guitarMode) dropPlayer();
       } else if (keyCode === 38) {
         playerRotate(stage, 1);
-      } else if (keyCode === 191) {
-        backOne();
       }
     }
   };

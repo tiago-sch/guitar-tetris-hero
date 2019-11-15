@@ -1,7 +1,7 @@
 # Guitar Tetris Hero
 
-Created by [Carlos Correa](https://github.com/caiobzen) and [Tiago Schmidt](https://github.com/schmidtas).
-
+Created by André Trevisani.
+Developed by [Carlos Correa](https://github.com/caiobzen) and [Tiago Schmidt](https://github.com/schmidtas).
 
 * Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * Node 10.15.0
@@ -16,6 +16,6 @@ Created by [Carlos Correa](https://github.com/caiobzen) and [Tiago Schmidt](http
 
 In the project directory, you can run:
 
-* `yarn start`
-* `yarn test`
-* `yarn build`
+* `yarn start` - Runs the application in developer mode at `http://localhost:3000/`;
+* `yarn test` - WIP;
+* `yarn build` - Builds the app for production to the `build` folder.

@@ -9,7 +9,7 @@ Developed by [Carlos Correa](https://github.com/caiobzen) and [Tiago Schmidt](ht
 ## Libraries/Sources
 
 * Guitar/Bass pitch: [pitchy js](https://github.com/ianprime0509/pitchy)
-* Tetris: [javascript-tetris](https://github.com/caiobzen/javascript-tetris)
+* Tetris: [React Tetris starter files](https://github.com/weibenfalk/react-tetris-starter-files)
 * Notes chart: [notes-frequencies.json gist](https://gist.github.com/i-Robi/8684800)
 
 ## Available Scripts

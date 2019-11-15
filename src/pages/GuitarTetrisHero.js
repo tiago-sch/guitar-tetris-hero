@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Title from 'components/Title';
+import TetrisGame from 'components/TetrisGame';
 
 const GuitarTetrisHero = () => {
   return (
-    <h1>Guitar Tetris Hero</h1>
+    <Fragment>
+      <Title>Guitar Tetris Hero</Title>
+      <TetrisGame guitarMode />
+    </Fragment>
   )
 };
 

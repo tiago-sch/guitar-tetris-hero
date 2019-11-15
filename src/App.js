@@ -3,20 +3,22 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom";
-import "./styles/app.scss";
-import Header from './components/Header';
+} from 'react-router-dom';
+import Header from 'components/Header';
+import { Main } from 'styles/Container';
+import GlobalStyle from 'styles/Global';
 
-import Pitchy from './pages/Pitchy';
-import Tetris from './pages/Tetris';
-import GuitarTetrisHero from './pages/GuitarTetrisHero';
+import Pitchy from 'pages/Pitchy';
+import Tetris from 'pages/Tetris';
+import GuitarTetrisHero from 'pages/GuitarTetrisHero';
 
 const App = () => {
   return (
     <Router>
+      <GlobalStyle />
       <Header />
 
-      <main className='container'>
+      <Main>
         <Switch>
           <Route path='/pitchy'>
             <Pitchy />
@@ -28,7 +30,7 @@ const App = () => {
             <GuitarTetrisHero />
           </Route>
         </Switch>
-      </main>
+      </Main>
     </Router>
   );
 }

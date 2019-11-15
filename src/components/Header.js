@@ -1,21 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Header } from 'styles/Container';
+import { Nav, Navbar, NavbarLink } from 'styles/Navbar';
 
-import { Link } from "react-router-dom";
-
-const Header = () => (
-  <header className='header'>
-    <nav className='header__nav container'>
-      <Link to='/' className='header__title'>Guitar Tetris Hero</Link>
-      <ul className='header__navbar'>
-        <li className='header__nav-link'>
-          <Link to='/pitchy'>Pitchy</Link>
-        </li>
-        <li className='header__nav-link'>
-          <Link to='/tetris'>Tetris</Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+const Navigation = () => (
+  <Header>
+    <Nav>
+      <Navbar>
+        <NavbarLink>
+          <NavLink to='/' exact={true} activeClassName='header__active-link' >Guitar Tetris Hero</NavLink>
+        </NavbarLink>
+        <NavbarLink>
+          <NavLink to='/pitchy' activeClassName='header__active-link' >Pitchy</NavLink>
+        </NavbarLink>
+        <NavbarLink>
+          <NavLink to='/tetris' activeClassName='header__active-link' >Tetris</NavLink>
+        </NavbarLink>
+      </Navbar>
+    </Nav>
+  </Header>
 );
 
-export default Header;
+export default Navigation;

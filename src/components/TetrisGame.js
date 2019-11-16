@@ -153,6 +153,7 @@ const TetrisGame = ({ guitarMode }) => {
     window.requestAnimationFrame(() => updatePitch(analyserNode, sampleRate));
   };
 
+
   useEffect(() => {
     if (note === nextNote.note) {
       drop();
@@ -167,6 +168,7 @@ const TetrisGame = ({ guitarMode }) => {
     } else if (![nextNote.note, prevNote.note].includes(note)) {
       backOne();
     }
+  // eslint-disable-next-line
   }, [note]);
 
   return (

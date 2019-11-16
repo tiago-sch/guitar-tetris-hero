@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { findPitch } from 'pitchy';
-import getNote from 'utils/getNote';
+import { getOctaveNote } from 'utils/getNote';
 
 const PitchIdentificator = () => {
   const [pitch, setPitch] = useState(null);
@@ -25,10 +25,10 @@ const PitchIdentificator = () => {
     analyserNode.getFloatTimeDomainData(data);
     let [pitch, clarity] = findPitch(data, sampleRate);
 
-    if (clarity > 0.97) {
+    if (clarity > 0.97 && clarity < 1.0) {
       setPitch(String(pitch));
       setClarity(String(clarity));
-      setNote(getNote(pitch));
+      setNote(getOctaveNote(pitch));
     }
     window.requestAnimationFrame(() => updatePitch(analyserNode, sampleRate));
   };

@@ -28,9 +28,9 @@ export const randomTetromino = () => {
 export const tetrisSong = [
   'E', 'B', 'C', 'D', 'C', 'B', 'A',
   'B', 'C', 'E', 'D', 'C', 'B',
-  'B', 'C', 'D', 'E', 'C', 'A', 'A',
+  'C', 'D', 'E', 'C', 'A',
 
-  'A', 'D', 'E', 'A', 'G', 'F', 'E',
+  'D', 'F', 'A', 'G', 'F', 'E',
   'D', 'C', 'E', 'D', 'C', 'B',
-  'B', 'C', 'D', 'E', 'C', 'A', 'A'
+  'C', 'D', 'E', 'C', 'A'
 ];

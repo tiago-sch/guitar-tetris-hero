@@ -24,5 +24,10 @@ export const NavbarLink = styled.li`
       color: ${colors.silver};
       transition: color .3s ease;
     }
+
+    &.header__active-link {
+      color: ${colors.redOcher};
+      text-decoration: underline;
+    }
   }
 `;

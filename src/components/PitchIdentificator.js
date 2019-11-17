@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { findPitch } from 'pitchy';
 import { getOctaveNote } from 'utils/getNote';
+import StartButton from 'components/TetrisComponents/StartButton';
 
 const PitchIdentificator = () => {
   const [pitch, setPitch] = useState(null);
@@ -26,8 +27,8 @@ const PitchIdentificator = () => {
     let [pitch, clarity] = findPitch(data, sampleRate);
 
     if (clarity > 0.97 && clarity < 1.0) {
-      setPitch(String(pitch));
-      setClarity(String(clarity));
+      setPitch(String(pitch.toFixed(4)));
+      setClarity(String(clarity.toFixed(4)));
       setNote(getOctaveNote(pitch));
     }
     window.requestAnimationFrame(() => updatePitch(analyserNode, sampleRate));
@@ -40,7 +41,7 @@ const PitchIdentificator = () => {
         <li>Clarity: <span>{ clarity }</span></li>
         <li>Note: <span>{ note }</span></li>
       </ul>
-      { !started && <button onClick={startPitchy}>START</button> }
+      { !started && <StartButton callback={startPitchy}>START</StartButton> }
     </Fragment>
   )
 };

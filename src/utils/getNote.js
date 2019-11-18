@@ -3,7 +3,7 @@ import { findKey, inRange } from 'lodash';
 
 export const getOctaveNote = ( pitchHz ) => {
   const noteLimit = .7;
-  const filter = (note) => { return inRange(pitchHz, note - noteLimit, note + noteLimit) };
+  const filter = (note) => inRange(pitchHz, note - noteLimit, note + noteLimit);
   return findKey(notes, filter) || null;
 }
 

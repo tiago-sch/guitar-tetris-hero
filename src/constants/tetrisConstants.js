@@ -34,3 +34,7 @@ export const tetrisSong = [
   'D', 'C', 'E', 'D', 'C', 'B',
   'C', 'D', 'E', 'C', 'A'
 ];
+
+export const somebodyOnceToldMe = [
+  'F#', 'C', 'C#', 'D#', 'G#', 'A#', 'B', 'C#'
+];

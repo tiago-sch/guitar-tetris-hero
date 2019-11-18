@@ -5,6 +5,8 @@ import { createStage, checkCollision } from 'utils/tetrisUtils';
 import getNote from 'utils/getNote';
 import { StyledTetrisWrapper, StyledTetris } from 'styles/Tetris/StyledTetris';
 import { tetrisSong } from 'constants/tetrisConstants';
+// MEMES:
+// import { somebodyOnceToldMe as tetrisSong } from 'constants/tetrisConstants';
 
 // Custom Hooks
 import { useInterval } from 'hooks/useInterval';
